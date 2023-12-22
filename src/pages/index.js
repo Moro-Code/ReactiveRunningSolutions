@@ -1,5 +1,5 @@
 import { Lato } from "next/font/google";
-import { DesktopNavigation } from "../components/DesktopNavigation";
+import { DesktopNavigation } from "@/components/DesktopNavigation";
 import { MobileNavigation } from "@/components/MobileNavigation";
 import { Quote } from "@/components/Quote";
 import { HeroContainer } from "@/components/HeroContainer";
@@ -7,6 +7,7 @@ import { HeroList } from "@/components/HeroList";
 import { FullScreenVideoBackground } from "@/components/FullScreenVideoBackground";
 import { ImageCard } from "@/components/ImageCard";
 import { ImageCardGrid } from "@/components/ImageCardGrid";
+import Head from "next/head";
 import Image from "next/image";
 
 const lato = Lato({ subsets: ["latin"], weight: "700" });
@@ -14,6 +15,18 @@ const lato = Lato({ subsets: ["latin"], weight: "700" });
 export default function Home() {
   return (
     <div className={`min-h-screen ${lato.className}`}>
+      <Head>
+        <title>Reactive Running Solutions</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta
+          name="description"
+          content="Reactive Running Solutions is a running coaching service that helps runners of all levels achieve their goals"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Reactive Running Solutions" />
+        <meta property="og:image" content="/logo.webp" />
+        <link rel="icon" href="/ReactiveRunningSolutionsLogo2.webp" />
+      </Head>
       <DesktopNavigation
         links={[
           { url: "/", name: "Home" },
