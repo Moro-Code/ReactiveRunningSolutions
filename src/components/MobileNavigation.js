@@ -34,7 +34,7 @@ export const MobileNavigation = ({ links }) => {
     }
   };
   return (
-    <header className="relative z-10 md:hidden bg-red-700 w-screen flex justify-center items-center h-32">
+    <header className="relative z-10 md:hidden bg-red-700 w-full flex justify-center items-center h-32 px-6">
       <nav className="flex h-max items-center">
         <Link href={"#facebook"} passHref legacyBehavior>
           <i className="icon-facebook text-5xl px-2 lg:px-4 hover:text-black cursor-pointer" />
@@ -46,8 +46,8 @@ export const MobileNavigation = ({ links }) => {
       <Image
         src={"/logo.webp"}
         alt={"Reactive Running Solutions Logo"}
-        width={300}
-        height={300}
+        width={200}
+        height={200}
       />
       <button
         className="icon-menu text-5xl hover:text-black"

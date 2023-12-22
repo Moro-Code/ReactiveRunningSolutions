@@ -2,7 +2,7 @@ import React from "react";
 
 export const FullScreenVideoBackground = () => {
   return (
-    <div className="fixed top-0 left-0 w-full h-screen -z-10">
+    <div className="fixed top-0 left-0 w-full h-full -z-10">
       <video
         className="w-full h-screen object-cover"
         autoPlay
