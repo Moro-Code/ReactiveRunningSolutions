@@ -7,6 +7,7 @@ export const FullScreenVideoBackground = () => {
         className="w-full h-screen object-cover"
         autoPlay
         loop
+        playsinline
         muted
         style={{ zIndex: -1 }}
       >
