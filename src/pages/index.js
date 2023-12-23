@@ -230,7 +230,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-          <p className="text-sm">
+          <p className="text-xs">
             &copy; 2023 Reactive Running Solutions. All Rights Reserved
           </p>
         </HeroContainer>
