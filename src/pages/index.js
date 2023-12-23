@@ -15,7 +15,7 @@ const lato = Lato({ subsets: ["latin"], weight: "700" });
 
 export default function Home() {
   return (
-    <div className={`min-h-screen ${lato.className}`}>
+    <div className={`min-h-screen text-white ${lato.className}`}>
       <Head>
         <title>Reactive Running Solutions</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

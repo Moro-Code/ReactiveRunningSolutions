@@ -14,6 +14,10 @@ module.exports = {
         "responsive-p": "1.5vw",
         "responsive-p-mobile": "2.5vw",
       },
+      height: {
+        card: "700px",
+        cardMobile: "570px",
+      },
       minHeight: {
         "600px": "600px",
       },
