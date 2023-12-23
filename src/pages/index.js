@@ -32,7 +32,7 @@ export default function Home() {
         links={[
           { url: "/", name: "Home" },
           { url: "#services", name: "Services" },
-          { url: "#couches", name: "Coaches" },
+          { url: "#coaches", name: "Coaches" },
           { url: "#facilityAndPartners", name: "Facility & Partners" },
           { url: "#contactUs", name: "Contact Us" },
         ]}
@@ -41,7 +41,7 @@ export default function Home() {
         links={[
           { url: "/", name: "Home" },
           { url: "#services", name: "Services" },
-          { url: "#couches", name: "Coaches" },
+          { url: "#coaches", name: "Coaches" },
           { url: "#facilityAndPartners", name: "Facility & Partners" },
           { url: "#contactUs", name: "Contact Us" },
         ]}
@@ -101,15 +101,15 @@ export default function Home() {
           </div>
         </HeroContainer>
         <h2
-          id="couches"
+          id="coaches"
           className="text-responsive-h2 text-white font-bold text-center"
         >
-          COUCHES
+          COACHES
         </h2>
         <ImageCardGrid>
           <ImageCard image={"/harry.webp"} imageAlt={"Image of Harry"}>
             <h3 className="text-responsive-h3 text-white font-bold text-center my-3">
-              WANKER
+              HARRY HUSSAIN
             </h3>
             <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
               Harry is the founder of Reactive Running Solutions. Having
