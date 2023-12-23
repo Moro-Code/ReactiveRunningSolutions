@@ -12,7 +12,7 @@ export const DesktopNavigation = ({ links }) => {
         width={300}
         height={300}
       />
-      <nav className="flex divide-x-2 h-max -ml-10">
+      <nav className="flex divide-x-2 -ml-10">
         {links.map((link, index) => (
           <Link key={index} href={link.url} passHref legacyBehavior>
             <a className="text-base font-medium text-white text-xs xl:text-lg hover:text-black px-2 lg:px-4">
@@ -21,11 +21,11 @@ export const DesktopNavigation = ({ links }) => {
           </Link>
         ))}
       </nav>
-      <nav className="flex h-max items-center">
-        <Link href={"#facebook"} passHref legacyBehavior>
+      <nav className="flex items-center">
+        <Link href={"https://www.facebook.com/reactiverunningsolutions"}>
           <i className="icon-facebook text-5xl px-2 lg:px-4 hover:text-black cursor-pointer" />
         </Link>
-        <Link href={"#instagram"} passHref legacyBehavior>
+        <Link href={"https://www.instagram.com/reactiverunningsolutions/"}>
           <i className="icon-instagram text-4xl hover:text-black cursor-pointer" />
         </Link>
       </nav>

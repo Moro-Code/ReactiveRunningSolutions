@@ -8,7 +8,7 @@ export const MobileNavigation = ({ links }) => {
   const mobileMenu = () => {
     if (menuOpen) {
       return (
-        <div className="absolute z-20 top-0 left-0 bg-black flex flex-col slide-left">
+        <div className="fixed z-20 top-0 left-0 bg-black flex flex-col slide-left h-screen">
           <button
             className="icon-clear text-5xl hover:text-red-700 ml-auto px-4"
             onClick={() => {
@@ -36,10 +36,10 @@ export const MobileNavigation = ({ links }) => {
   return (
     <header className="relative z-10 md:hidden bg-red-700 w-full flex justify-center items-center h-32 px-6">
       <nav className="flex h-max items-center">
-        <Link href={"#facebook"} passHref legacyBehavior>
+        <Link href={"https://www.facebook.com/reactiverunningsolutions"}>
           <i className="icon-facebook text-5xl px-2 lg:px-4 hover:text-black cursor-pointer" />
         </Link>
-        <Link href={"#instagram"} passHref legacyBehavior>
+        <Link href={"https://www.instagram.com/reactiverunningsolutions/"}>
           <i className="icon-instagram text-4xl hover:text-black cursor-pointer" />
         </Link>
       </nav>

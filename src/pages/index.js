@@ -9,6 +9,7 @@ import { ImageCard } from "@/components/ImageCard";
 import { ImageCardGrid } from "@/components/ImageCardGrid";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 
 const lato = Lato({ subsets: ["latin"], weight: "700" });
 
@@ -179,7 +180,9 @@ export default function Home() {
                 any sport, and our expertise and qualifications puts us in a
                 unique position.
               </p>
-              <h3 className="text-2xl">Athletes Training Athletes</h3>
+              <h3 className="text-xl sm:text-2xl">
+                Athletes Training Athletes
+              </h3>
               <button className="bg-red-700 hover:bg-black p-4 my-4 rounded-md">
                 <a
                   className="text-xl"
@@ -191,9 +194,13 @@ export default function Home() {
             </div>
           </HeroContainer>
         </div>
+      </main>
+      <footer className="w-full">
         <HeroContainer backgroundColor="bg-gray-950">
-          <h2 className="text-responsive-h2">Contact Us</h2>
-          <div className="flex items-center flex-wrap justify-center w-full my-4">
+          <h2 id="contactUs" className="text-2xl md:text-responsive-h3">
+            Contact Us
+          </h2>
+          <div className="flex items-center flex-wrap justify-center w-full my-8">
             <h3 className="m-0 text-xl text-center w-full my-2">
               Reactive Running Solutions
             </h3>
@@ -203,14 +210,31 @@ export default function Home() {
               K1J 8H9 <br />
             </address>
             <Image
+              className="pl-2"
               src="/ReactiveRunningSolutionsLogo2.webp"
               alt="Reactive Running Solutions Logo"
               width={100}
               height={100}
             />
+            <div className="w-full flex justify-center items-center">
+              <Link href={"https://www.facebook.com/reactiverunningsolutions"}>
+                <i className="icon-facebook text-5xl px-2 lg:px-4 hover:text-black cursor-pointer" />
+              </Link>
+              <Link
+                href={"https://www.instagram.com/reactiverunningsolutions/"}
+              >
+                <i className="icon-instagram text-4xl hover:text-black cursor-pointer" />
+              </Link>
+              <Link href={"mailto:reactiverunningsolutions@gmail.com"}>
+                <i className="icon-email text-5xl hover:text-black cursor-pointer px-2 lg:px-4" />
+              </Link>
+            </div>
           </div>
+          <p className="text-sm">
+            &copy; 2023 Reactive Running Solutions. All Rights Reserved
+          </p>
         </HeroContainer>
-      </main>
+      </footer>
     </div>
   );
 }

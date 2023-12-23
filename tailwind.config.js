@@ -8,7 +8,7 @@ module.exports = {
   theme: {
     extend: {
       fontSize: {
-        "responsive-h1": "7vw",
+        "responsive-h1": "6vw",
         "responsive-h2": "5vw",
         "responsive-h3": "3vw",
         "responsive-p": "1.5vw",
