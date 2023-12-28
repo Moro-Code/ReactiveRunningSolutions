@@ -7,6 +7,7 @@ import { HeroList } from "@/components/HeroList";
 import { FullScreenVideoBackground } from "@/components/FullScreenVideoBackground";
 import { ImageCard } from "@/components/ImageCard";
 import { ImageCardGrid } from "@/components/ImageCardGrid";
+import { ToTheTopButton } from "@/components/ToTheTopButton";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -48,6 +49,7 @@ export default function Home() {
       />
       <FullScreenVideoBackground />
       <main className="relative z-0 flex flex-col items-center">
+        <ToTheTopButton />
         <h1 className="text-responsive-h1 text-center my-20">
           TAKE YOUR RUNNING
           <br />
@@ -205,7 +207,7 @@ export default function Home() {
               Reactive Running Solutions
             </h3>
             <address className="text-xl">
-              811 Shefford Rd <br />
+              813 Shefford Rd <br />
               Ottawa, ON <br />
               K1J 8H9 <br />
             </address>
