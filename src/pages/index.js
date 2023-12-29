@@ -55,6 +55,20 @@ export default function Home() {
           <br />
           TO THE NEXT LEVEL
         </h1>
+        <HeroContainer backgroundColor="bg-red-700">
+          <h2 className="text-responsive-h2 mb-3">OUR PHILOSOPHY</h2>
+          <div className="w-5/6 h-80 md:h-card">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube-nocookie.com/embed/NegX48rYsws?si=xKnvJB80mW8PS3xV"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </HeroContainer>
         <Quote quote="DON'T DREAM OF WINNING, TRAIN FOR IT" author="MO FARAH" />
         <HeroContainer backroundImage={"herobackgroundimage.webp"}>
           <div className="w-4/5 md:w-2/3">
@@ -100,6 +114,19 @@ export default function Home() {
               specific needs. Training alongside our highly skilled coaches in
               an athletic performance facility will help meet your goals
             </p>
+          </div>
+        </HeroContainer>
+        <HeroContainer backgroundColor="bg-slate-700">
+          <div className="w-5/6 h-80 md:h-96">
+            <iframe
+              width="100%"
+              height="100%"
+              src="https://www.youtube-nocookie.com/embed/NegX48rYsws?si=xKnvJB80mW8PS3xV"
+              title="YouTube video player"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            ></iframe>
           </div>
         </HeroContainer>
         <h2
