@@ -116,19 +116,6 @@ export default function Home() {
             </p>
           </div>
         </HeroContainer>
-        <HeroContainer backgroundColor="bg-slate-700">
-          <div className="w-5/6 h-80 md:h-96">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube-nocookie.com/embed/NegX48rYsws?si=xKnvJB80mW8PS3xV"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
-          </div>
-        </HeroContainer>
         <h2
           id="coaches"
           className="text-responsive-h2 text-white font-bold text-center"
