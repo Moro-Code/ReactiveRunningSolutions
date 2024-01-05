@@ -241,7 +241,7 @@ export default function Home() {
               >
                 <i className="icon-instagram text-4xl hover:text-black cursor-pointer" />
               </Link>
-              <Link href={"mailto:reactiverunningsolutions@gmail.com"}>
+              <Link href={"mailto:contact@reactiverunningsolutions.com"}>
                 <i className="icon-email text-5xl hover:text-black cursor-pointer px-2 lg:px-4" />
               </Link>
             </div>
