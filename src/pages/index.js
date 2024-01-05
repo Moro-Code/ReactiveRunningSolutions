@@ -216,6 +216,18 @@ export default function Home() {
           <h2 id="contactUs" className="text-2xl md:text-responsive-h3">
             Contact Us
           </h2>
+          <HeroContainer>
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSepLgjbGxzL9ofvEWjFj9sjbL4N1ZI04k8JC4yeAtb3ttmENg/viewform?embedded=true"
+              width="400"
+              height="1300"
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
+            >
+              Loading…
+            </iframe>
+          </HeroContainer>
           <div className="flex items-center flex-wrap justify-center w-full my-8">
             <h3 className="m-0 text-xl text-center w-full my-2">
               Reactive Running Solutions
