@@ -22,9 +22,6 @@ export const DesktopNavigation = ({ links }) => {
         ))}
       </nav>
       <nav className="flex items-center">
-        <Link href={"https://www.facebook.com/reactiverunningsolutions"}>
-          <i className="icon-facebook text-5xl px-2 lg:px-4 hover:text-black cursor-pointer" />
-        </Link>
         <Link href={"https://www.instagram.com/reactiverunningsolutions/"}>
           <i className="icon-instagram text-4xl hover:text-black cursor-pointer" />
         </Link>

@@ -1,7 +1,6 @@
 import { Lato } from "next/font/google";
 import { DesktopNavigation } from "@/components/DesktopNavigation";
 import { MobileNavigation } from "@/components/MobileNavigation";
-import { Quote } from "@/components/Quote";
 import { HeroContainer } from "@/components/HeroContainer";
 import { HeroList } from "@/components/HeroList";
 import { FullScreenVideoBackground } from "@/components/FullScreenVideoBackground";
@@ -33,7 +32,7 @@ export default function Home() {
         links={[
           { url: "/", name: "Home" },
           { url: "#services", name: "Services" },
-          { url: "#coaches", name: "Coaches" },
+          { url: "#ourTeam", name: "Our Team" },
           { url: "#facilityAndPartners", name: "Facility & Partners" },
           { url: "#contactUs", name: "Contact Us" },
         ]}
@@ -42,7 +41,7 @@ export default function Home() {
         links={[
           { url: "/", name: "Home" },
           { url: "#services", name: "Services" },
-          { url: "#coaches", name: "Coaches" },
+          { url: "#ourTeam", name: "Our Team" },
           { url: "#facilityAndPartners", name: "Facility & Partners" },
           { url: "#contactUs", name: "Contact Us" },
         ]}
@@ -51,12 +50,23 @@ export default function Home() {
       <main className="relative z-0 flex flex-col items-center">
         <ToTheTopButton />
         <h1 className="text-responsive-h1 text-center my-20">
-          TAKE YOUR RUNNING
-          <br />
-          TO THE NEXT LEVEL
+          ELITE-LEVEL RUNNING TRAINING FOR EVERY RUNNER
         </h1>
+        <p className="-mt-10 mb-5 text-responsive-p-mobile md:text-responsive-p p-10">
+          Unlock your running potential with Ottawa&apos;s premier training
+          program, crafted to enhance strength, speed, and performance while
+          minimizing pain and injury
+        </p>
         <HeroContainer backgroundColor="bg-red-700">
           <h2 className="text-responsive-h2 mb-3">OUR PHILOSOPHY</h2>
+          <p className="mb-10 text-responsive-p-mobile md:text-responsive-p p10">
+            At Reactive Running Solutions, we understand your passion for
+            running, but we also recognize the importance of strength, mobility,
+            and technique. Our highly specialized training includes cutting-edge
+            strength and technical exercises, along with the world&apos;s
+            leading mobility system. With our approach, your next run will be
+            faster, stronger and injury free.
+          </p>
           <div className="w-5/6 h-80 md:h-card">
             <iframe
               width="100%"
@@ -69,43 +79,49 @@ export default function Home() {
             ></iframe>
           </div>
         </HeroContainer>
-        <Quote quote="DON'T DREAM OF WINNING, TRAIN FOR IT" author="MO FARAH" />
         <HeroContainer backroundImage={"herobackgroundimage.webp"}>
           <div className="w-4/5 md:w-2/3">
             <h2
               id="services"
               className="text-responsive-h2 text-white font-bold text-center"
             >
-              SERVICES
+              YOUR JOURNEY STARTS HERE
             </h2>
             <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
-              Through an integrated approach, we make sure that when the next
-              race starts you are strong, fast, and pain-free.
+              We strongly believe in customizing your training to suit your
+              individual requirements. Each runner who enrolls with Reactive
+              Running Solutions begins with our introductory training package
             </p>
             <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
-              We utilize cutting edge methods to ensure training in the gym
-              produces your next personal best!
+              Over three sessions (priced at $149 + tax), we diligently evaluate
+              your primary strengths and areas for enhancement through a
+              detailed process
             </p>
             <HeroList
               items={[
                 {
-                  itemNumber: "1",
+                  itemNumber: "Step #1: Assessment",
                   itemText:
-                    "Strength and coordinative training developed specifically for runners. " +
-                    "No non-specific exercises. " +
-                    "Strength work that makes you stronger and more efficient",
+                    "To ensure we address all your injury concerns comprehensively, we\n" +
+                    "employ the Functional Range Assessment (FRA), the world’s premier diagnostic tool for evaluating your\n" +
+                    "joint's ability to move. This enables us to gain insights into your body's functionality from head to toe,\n" +
+                    "empowering us to craft a tailored plan targeting your key mobility needs.",
                 },
                 {
-                  itemNumber: "2",
+                  itemNumber: "Step #2: Training",
                   itemText:
-                    "Technique drills designed to improve overall running abilities no matter the level. " +
-                    "Minimize fatigue and accelerate improvements",
+                    "After assessing your current capabilities using the FRA, we promptly\n" +
+                    "commence crafting your workouts. We incorporate a diverse array of cutting-edge strength and technical\n" +
+                    "exercises. Regardless of age, ability or experience level, our sessions are challenging, enjoyable, and\n" +
+                    "rewarding, aimed at enhancing your speed and optimizing your movement potential.",
                 },
                 {
-                  itemNumber: "3",
+                  itemNumber: "Step #3: Planning",
                   itemText:
-                    "Functional Range Assessment and Conditioning to optimize joint health, " +
-                    "improve mobility, and reduce injury risk",
+                    "We meticulously tailor a comprehensive plan to seamlessly integrate\n" +
+                    "with your existing training regimen, ensuring optimal performance without compromising your training or\n" +
+                    "recovery. Whether you are focussed on running for the long haul, gearing up for a major race, or just\n" +
+                    "starting your running journey, our expertise is here to guide you every step of the way.",
                 },
               ]}
             />
@@ -117,10 +133,10 @@ export default function Home() {
           </div>
         </HeroContainer>
         <h2
-          id="coaches"
+          id="ourTeam"
           className="text-responsive-h2 text-white font-bold text-center"
         >
-          COACHES
+          OUR TEAM
         </h2>
         <ImageCardGrid>
           <ImageCard image={"/harry.webp"} imageAlt={"Image of Harry"}>
@@ -175,46 +191,12 @@ export default function Home() {
               </p>
             </div>
           </HeroContainer>
-          <HeroContainer backgroundColor="bg-slate-700">
-            <div className="flex flex-col justify-center items-center w-4/5 md:w-2/3">
-              <Image
-                src={"/PerformanceSportsTherapy.webp"}
-                alt={"Performance Sports Therapy Logo"}
-                width={200}
-                height={200}
-              />
-              <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
-                As a team of experienced professionals, we offer services to
-                sports teams, athletic organizations, schools, individual
-                athletes, and everyday folks who require and appreciate the
-                expertise, attention and care for which we are known.
-              </p>
-              <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
-                We use a professionally collaborative approach in our treatments
-                and exercise our skills to the benefit of athletes. In
-                particular, we are fully equipped to work directly with teams in
-                any sport, and our expertise and qualifications puts us in a
-                unique position.
-              </p>
-              <h3 className="text-xl sm:text-2xl">
-                Athletes Training Athletes
-              </h3>
-              <button className="bg-red-700 hover:bg-black p-4 my-4 rounded-md">
-                <a
-                  className="text-xl"
-                  href="https://www.performancesportstherapy.ca/"
-                >
-                  Learn More
-                </a>
-              </button>
-            </div>
-          </HeroContainer>
         </div>
       </main>
       <footer className="w-full">
         <HeroContainer backgroundColor="bg-gray-950">
           <h2 id="contactUs" className="text-2xl md:text-responsive-h3">
-            Contact Us
+            CONTACT US
           </h2>
           <HeroContainer>
             <iframe
@@ -258,6 +240,13 @@ export default function Home() {
               </Link>
             </div>
           </div>
+          <iframe
+            width="400"
+            height="450"
+            loading="lazy"
+            allowFullScreen
+            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJf_nXkToQzkwRY2MgMAXco-w&key=AIzaSyAb6KjvUPEM4nGXvZ-1zpjzP-1p7I0msAw"
+          ></iframe>
           <p className="text-xs">
             &copy; 2023 Reactive Running Solutions. All Rights Reserved
           </p>

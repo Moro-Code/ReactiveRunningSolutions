@@ -36,9 +36,6 @@ export const MobileNavigation = ({ links }) => {
   return (
     <header className="relative z-10 md:hidden bg-red-700 w-full flex justify-center items-center h-32 px-6">
       <nav className="flex h-max items-center">
-        <Link href={"https://www.facebook.com/reactiverunningsolutions"}>
-          <i className="icon-facebook text-5xl px-2 lg:px-4 hover:text-black cursor-pointer" />
-        </Link>
         <Link href={"https://www.instagram.com/reactiverunningsolutions/"}>
           <i className="icon-instagram text-4xl hover:text-black cursor-pointer" />
         </Link>
