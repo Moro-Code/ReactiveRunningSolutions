@@ -11,9 +11,9 @@ module.exports = {
         "responsive-h1": "6vw",
         "responsive-h2": "5vw",
         "responsive-h3": "3vw",
-        "responsive-h4": "2vw",
+        "responsive-h4": "2.5vw",
         "responsive-p": "1.5vw",
-        "responsive-p-mobile": "2vw",
+        "responsive-p-mobile": "2.5vw",
       },
       height: {
         card: "700px",
