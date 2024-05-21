@@ -170,7 +170,7 @@ export default function Home() {
         </ImageCardGrid>
         <div
           id="facilityAndPartners"
-          className="w-full flex flex-col md:flex-row min-h-600px"
+          className="w-full flex flex-col md:flex-row"
         >
           <HeroContainer backroundImage="TitanGymImage.webp">
             <div className="flex flex-col justify-center items-center w-4/5 md:w-2/3 bg-slate-700/90 p-8">
