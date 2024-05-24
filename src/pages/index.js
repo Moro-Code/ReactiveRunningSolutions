@@ -7,6 +7,7 @@ import { FullScreenVideoBackground } from "@/components/FullScreenVideoBackgroun
 import { ImageCard } from "@/components/ImageCard";
 import { ImageCardGrid } from "@/components/ImageCardGrid";
 import { ToTheTopButton } from "@/components/ToTheTopButton";
+import { InstagramGrid } from "@/components/InstagramGrid";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
@@ -18,27 +19,33 @@ export default function Home() {
     <div className={`min-h-screen text-white ${lato.className}`}>
       <Head>
         <title>Reactive Running Solutions</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <meta
-          name="description"
-          content="Reactive Running Solutions is a running coaching service that helps runners of all levels achieve their goals"
+            name="description"
+            content="Reactive Running Solutions is a running coaching service that helps runners of all levels achieve their goals"
         />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Reactive Running Solutions" />
-        <meta property="og:image" content="/logo.webp" />
-        <link rel="icon" href="/ReactiveRunningSolutionsLogo2.webp" />
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="Reactive Running Solutions"/>
+        <meta property="og:image" content="/logo.webp"/>
+        <link rel="icon" href="/ReactiveRunningSolutionsLogo2.webp"/>
+        <script
+            dangerouslySetInnerHTML={{
+              __html:
+                  '(function(d, s, id) {var js; if (d.getElementById(id)) {return;} js = d.createElement(s); js.id = id; js.src = "https://embedsocial.com/cdn/ht.js"; d.getElementsByTagName("head")[0].appendChild(js);}(document, "script", "EmbedSocialHashtagScript"));',
+            }}
+        />
       </Head>
       <DesktopNavigation
-        links={[
-          { url: "/", name: "Home" },
-          { url: "#services", name: "Services" },
-          { url: "#ourTeam", name: "Our Team" },
-          { url: "#facilityAndPartners", name: "Facility & Partners" },
-          { url: "#contactUs", name: "Contact Us" },
-        ]}
+          links={[
+            {url: "/", name: "Home"},
+            {url: "#services", name: "Services"},
+            {url: "#ourTeam", name: "Our Team"},
+            {url: "#facilityAndPartners", name: "Facility & Partners"},
+            {url: "#contactUs", name: "Contact Us"},
+          ]}
       />
       <MobileNavigation
-        links={[
+          links={[
           { url: "/", name: "Home" },
           { url: "#services", name: "Services" },
           { url: "#ourTeam", name: "Our Team" },
@@ -170,7 +177,7 @@ export default function Home() {
         </ImageCardGrid>
         <div
           id="facilityAndPartners"
-          className="w-full flex flex-col md:flex-row"
+          className="w-full flex flex-col"
         >
           <HeroContainer backroundImage="TitanGymImage.webp">
             <div className="flex flex-col justify-center items-center w-4/5 md:w-2/3 bg-slate-700/90 p-8">
@@ -191,6 +198,9 @@ export default function Home() {
               </p>
             </div>
           </HeroContainer>
+          <div className="bg-slate-100">
+            <InstagramGrid />
+          </div>
         </div>
       </main>
       <footer className="w-full">
