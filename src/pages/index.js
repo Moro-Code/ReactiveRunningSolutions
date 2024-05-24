@@ -146,32 +146,15 @@ export default function Home() {
           OUR TEAM
         </h2>
         <ImageCardGrid>
-          <ImageCard image={"/harry.webp"} imageAlt={"Image of Harry"}>
-            <h3 className="text-responsive-h3 text-white font-bold text-center my-3">
-              HARRY HUSSAIN
-            </h3>
+          <ImageCard image={"/team.png"} imageAlt={"Image of the Reactive Running Solutions Team"}>
             <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
-              Harry is the founder of Reactive Running Solutions. Having
-              previously competed at a high level, he turned his passion for
-              running into a career helping other runners perform at their very
-              best. He currently works with a wide variety of athletes from
-              Ironman competitors to those looking to improve their 5k time. We
-              can help you reach your full potential and make your running goal
-              a reality!
-            </p>
-          </ImageCard>
-          <ImageCard image={"/gabriel.webp"} imageAlt={"Image of Gabriel"}>
-            <h3 className="text-responsive-h3 text-white font-bold text-center my-3">
-              GABRIEL RAPLEY
-            </h3>
-            <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
-              Gabriel has an extensive background training athletes in all
-              manners of field sports. He currently works with a spectrum of
-              athletes remotely and in person ranging from young athletes to the
-              NCAA level. Gabriel also enjoys working with many local
-              competitive youth and recreational athletes to help develop
-              agility and a stronger running ability. Whatever sport you are
-              looking to get faster in, we have you covered!
+              Reactive Running Solutions was founded by coaches Harry Hussain and Gabriel Rapley, driven by the vision
+              of providing elite running training to both athletes and individuals. Their venture has led them to
+              collaborate with NFL/CFL athletes, world championship-level track and field competitors, and numerous
+              members of Ottawa&apos;s athletics clubs. Their pride lies in the hundreds of everyday runners committed to
+              enhancing their speed, strength, and injury resilience. Whether you seek world-class strength training,
+              improved mobility for pain-free running, or surpassing personal records, our team of expert coaches is
+              dedicated to supporting you every step of the way.
             </p>
           </ImageCard>
         </ImageCardGrid>
