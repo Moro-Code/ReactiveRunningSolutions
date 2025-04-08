@@ -62,7 +62,7 @@ export default function Home() {
             <span className="block text-red-500">FOR EVERY RUNNER</span>
           </h1>
           <p className="text-responsive-p-mobile md:text-responsive-p text-center max-w-3xl mx-auto mb-20 animate-fade-in-delay">
-            Unlock your running potential with Ottawa&apos;s premier training
+            Unlock your running potential with Ottawa&apos;s premier veteran-owned training
             program, crafted to enhance strength, speed, and performance while
             minimizing pain and injury
           </p>
@@ -74,7 +74,8 @@ export default function Home() {
             <p className="text-responsive-p-mobile md:text-responsive-p text-center max-w-3xl mx-auto mb-12">
               At Reactive Running Solutions, we understand your passion for
               running, but we also recognize the importance of strength, mobility,
-              and technique. Our highly specialized training includes cutting-edge
+              and technique. As a veteran-owned business, we bring military precision and
+              dedication to our highly specialized training, which includes cutting-edge
               strength and technical exercises, along with the world&apos;s
               leading mobility system. With our approach, your next run will be
               faster, stronger and injury free.
@@ -204,6 +205,23 @@ export default function Home() {
                     <li>Improve your range of motion and reduce your risk of pain or injury, giving you a competitive edge.</li>
                   </ul>
                 </div>
+
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-4 sm:p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
+                  <h5 className="text-base md:text-lg font-bold text-gray-300 mb-3 md:mb-4">Customized Conditioning Plans</h5>
+                  <ul className="space-y-3 md:space-y-4 text-responsive-p-mobile md:text-responsive-p">
+                    <li>Enhance your aerobic capacity with personalized training programs designed to meet your specific needs.</li>
+                    <li>Our plans are tailored to your current fitness level, available equipment, and the timeframe leading up to your test.</li>
+                    <li>Experience highly motivating and varied workouts that will push you to your optimal performance.</li>
+                  </ul>
+                </div>
+
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-4 sm:p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
+                  <h5 className="text-base md:text-lg font-bold text-gray-300 mb-3 md:mb-4">Expert Coaching</h5>
+                  <ul className="space-y-3 md:space-y-4 text-responsive-p-mobile md:text-responsive-p">
+                    <li>Our coaches are dedicated to your success. They will provide personalized feedback and guidance throughout your training.</li>
+                    <li>We are the industry leader in specialized running training.</li>
+                  </ul>
+                </div>
               </div>
 
               <div className="text-center max-w-4xl mx-auto bg-white/10 p-4 sm:p-6 md:p-8 rounded-xl shadow-xl backdrop-blur-sm">
@@ -228,7 +246,7 @@ export default function Home() {
         <ImageCardGrid>
           <ImageCard image={"/team.png"} imageAlt={"Image of the Reactive Running Solutions Team"}>
             <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
-              Reactive Running Solutions was founded by coaches Harry Hussain and Gabriel Rapley, driven by the vision
+              Reactive Running Solutions was founded by British Army veteran Harry Hussain and Gabriel Rapley, driven by the vision
               of providing elite running training to both athletes and individuals. Their venture has led them to
               collaborate with NFL/CFL athletes, world championship-level track and field competitors, and numerous
               members of Ottawa&apos;s athletics clubs. Their pride lies in the hundreds of everyday runners committed to

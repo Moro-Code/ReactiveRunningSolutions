@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import Link from "next/link";
 import Image from "next/image";
+import { VeteranOwnedBadge } from "./VeteranOwnedBadge";
 
 export const MobileNavigation = ({ links }) => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -10,26 +11,30 @@ export const MobileNavigation = ({ links }) => {
   const mobileMenu = () => {
     if (menuOpen) {
       return (
-        <div className="fixed z-20 top-0 left-0 bg-black flex flex-col slide-left h-screen">
-          <button
-            className="icon-clear text-5xl hover:text-red-700 ml-auto px-4"
-            onClick={() => {
-              setMenuOpen(false);
-              setServicesOpen(false);
-            }}
-          />
-          <nav className="flex flex-col divide-y-2 w-screen h-screen px-6">
+        <div className="fixed inset-0 z-20 bg-black flex flex-col w-full h-full">
+          <div className="flex items-center justify-end px-4 py-3 border-b border-gray-800">
+            <button
+              className="text-3xl text-white hover:text-gray-300"
+              onClick={() => {
+                setMenuOpen(false);
+                setServicesOpen(false);
+              }}
+            >
+              <i className="icon-clear" />
+            </button>
+          </div>
+          <nav className="flex flex-col divide-y divide-gray-800 px-4">
             {links.map((link, index) => {
               if (link.url === "#services") {
                 return (
                   <div key={index} className="py-4">
                     <button
-                      className="text-center text-white text-xl hover:text-red-700 w-full flex items-center justify-center gap-2"
+                      className="text-white text-2xl font-medium hover:text-gray-300 w-full flex items-center justify-between"
                       onClick={() => setServicesOpen(!servicesOpen)}
                     >
                       {link.name}
                       <svg 
-                        className={`w-4 h-4 transform transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} 
+                        className={`w-6 h-6 transform transition-transform duration-200 ${servicesOpen ? 'rotate-180' : ''}`} 
                         fill="none" 
                         stroke="currentColor" 
                         viewBox="0 0 24 24"
@@ -38,10 +43,10 @@ export const MobileNavigation = ({ links }) => {
                       </svg>
                     </button>
                     {servicesOpen && (
-                      <div className="mt-4 space-y-2 bg-red-900/50 rounded-lg p-4">
+                      <div className="mt-4 space-y-2 bg-gray-900 rounded-lg p-4">
                         <Link href="#services" passHref legacyBehavior>
                           <a
-                            className="block text-center text-white text-lg hover:text-red-700 py-2"
+                            className="block text-white text-xl hover:text-gray-300 py-2"
                             onClick={() => {
                               setMenuOpen(false);
                               setServicesOpen(false);
@@ -52,7 +57,7 @@ export const MobileNavigation = ({ links }) => {
                         </Link>
                         <Link href="#shuttleRun" passHref legacyBehavior>
                           <a
-                            className="block text-center text-white text-lg hover:text-red-700 py-2"
+                            className="block text-white text-xl hover:text-gray-300 py-2"
                             onClick={() => {
                               setMenuOpen(false);
                               setServicesOpen(false);
@@ -69,7 +74,7 @@ export const MobileNavigation = ({ links }) => {
               return (
                 <Link key={index} href={link.url} passHref legacyBehavior>
                   <a
-                    className="text-center text-white text-xl hover:text-red-700 py-4"
+                    className="block text-white text-2xl font-medium hover:text-gray-300 py-4"
                     onClick={() => {
                       setMenuOpen(false);
                       setServicesOpen(false);
@@ -84,29 +89,43 @@ export const MobileNavigation = ({ links }) => {
         </div>
       );
     }
+    return null;
   };
 
   return (
-    <header className="relative z-10 md:hidden bg-red-700 w-full flex justify-center items-center h-32 px-6">
-      <nav className="flex h-max items-center">
-        <Link href={"https://www.instagram.com/reactiverunningsolutions/"} passHref legacyBehavior>
-          <a>
-            <i className="icon-instagram text-4xl hover:text-black cursor-pointer" />
-          </a>
-        </Link>
-      </nav>
-      <Image
-        src={"/logo.webp"}
-        alt={"Reactive Running Solutions Logo"}
-        width={200}
-        height={200}
-      />
+    <header className="relative z-10 md:hidden bg-red-800 w-full flex justify-between items-center px-4 py-3">
       <button
-        className="icon-menu text-5xl hover:text-black"
-        onClick={() => {
-          setMenuOpen(true);
-        }}
-      />
+        className="text-3xl text-white hover:text-gray-300"
+        onClick={() => setMenuOpen(true)}
+      >
+        <i className="icon-menu" />
+      </button>
+      
+      <div className="flex flex-col items-center">
+        <div className="w-[80px]">
+          <Image
+            src={"/logo.webp"}
+            alt={"Reactive Running Solutions Logo"}
+            width={80}
+            height={80}
+            className="transition-transform hover:scale-105 duration-300"
+          />
+          <div className="mt-1.5">
+            <VeteranOwnedBadge />
+          </div>
+        </div>
+      </div>
+
+      <Link 
+        href={"https://www.instagram.com/reactiverunningsolutions/"} 
+        passHref 
+        legacyBehavior
+      >
+        <a className="text-white hover:text-gray-300 transition-colors duration-200">
+          <i className="icon-instagram text-3xl" />
+        </a>
+      </Link>
+
       {mobileMenu()}
     </header>
   );
