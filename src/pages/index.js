@@ -100,50 +100,59 @@ export default function Home() {
             </h2>
 
             {/* General Training Program */}
-            <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 p-8 md:p-12 rounded-2xl mb-20 shadow-xl">
-              <h3 className="text-responsive-h3 text-red-500 font-bold text-center mb-8">
+            <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 p-4 sm:p-6 md:p-12 rounded-2xl mb-12 md:mb-20 shadow-xl">
+              <h3 className="text-responsive-h3 text-red-500 font-bold text-center mb-6 md:mb-8">
                 YOUR JOURNEY STARTS HERE
               </h3>
               <div className="max-w-4xl mx-auto">
-                <p className="mb-8 text-responsive-p-mobile md:text-responsive-p">
+                <p className="mb-6 md:mb-8 text-responsive-p-mobile md:text-responsive-p px-2 sm:px-4">
                   We strongly believe in customizing your training to suit your
                   individual requirements. Each runner who enrolls with Reactive
                   Running Solutions begins with our introductory training package
                 </p>
-                <p className="mb-12 text-responsive-p-mobile md:text-responsive-p">
+                <p className="mb-8 md:mb-12 text-responsive-p-mobile md:text-responsive-p px-2 sm:px-4">
                   Over three sessions (priced at $199 + tax), we diligently evaluate
                   your primary strengths and areas for enhancement through a
                   detailed process
                 </p>
-                <HeroList
-                  items={[
-                    {
-                      itemNumber: "Step #1: Assessment",
-                      itemText:
-                        "To ensure we address all your injury concerns comprehensively, we\n" +
-                        "employ the Functional Range Assessment (FRA), the world's premier diagnostic tool for evaluating your\n" +
-                        "joint's ability to move. This enables us to gain insights into your body's functionality from head to toe,\n" +
-                        "empowering us to craft a tailored plan targeting your key mobility needs.",
-                    },
-                    {
-                      itemNumber: "Step #2: Training",
-                      itemText:
-                        "After assessing your current capabilities using the FRA, we promptly\n" +
-                        "commence crafting your workouts. We incorporate a diverse array of cutting-edge strength and technical\n" +
-                        "exercises. Regardless of age, ability or experience level, our sessions are challenging, enjoyable, and\n" +
-                        "rewarding, aimed at enhancing your speed and optimizing your movement potential.",
-                    },
-                    {
-                      itemNumber: "Step #3: Planning",
-                      itemText:
-                        "We meticulously tailor a comprehensive plan to seamlessly integrate\n" +
-                        "with your existing training regimen, ensuring optimal performance without compromising your training or\n" +
-                        "recovery. Whether you are focussed on running for the long haul, gearing up for a major race, or just\n" +
-                        "starting your running journey, our expertise is here to guide you every step of the way.",
-                    },
-                  ]}
-                />
-                <p className="mt-12 text-responsive-p-mobile md:text-responsive-p">
+                
+                {/* Steps Cards */}
+                <div className="space-y-6 md:space-y-8 px-2 sm:px-4 mb-8">
+                  {/* Step 1 */}
+                  <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-4 sm:p-6 rounded-xl shadow-lg transform hover:scale-[1.01] transition-all duration-300">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="text-red-500 text-xl md:text-2xl font-bold">Step #1:</span>
+                      <h4 className="text-lg md:text-xl font-bold text-gray-200">Assessment</h4>
+                    </div>
+                    <p className="text-responsive-p-mobile md:text-responsive-p text-gray-300">
+                      To ensure we address all your injury concerns comprehensively, we employ the Functional Range Assessment (FRA), the world&apos;s premier diagnostic tool for evaluating your joint&apos;s ability to move. This enables us to gain insights into your body&apos;s functionality from head to toe, empowering us to craft a tailored plan targeting your key mobility needs.
+                    </p>
+                  </div>
+
+                  {/* Step 2 */}
+                  <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-4 sm:p-6 rounded-xl shadow-lg transform hover:scale-[1.01] transition-all duration-300">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="text-red-500 text-xl md:text-2xl font-bold">Step #2:</span>
+                      <h4 className="text-lg md:text-xl font-bold text-gray-200">Training</h4>
+                    </div>
+                    <p className="text-responsive-p-mobile md:text-responsive-p text-gray-300">
+                      After assessing your current capabilities using the FRA, we promptly commence crafting your workouts. We incorporate a diverse array of cutting-edge strength and technical exercises. Regardless of age, ability or experience level, our sessions are challenging, enjoyable, and rewarding, aimed at enhancing your speed and optimizing your movement potential.
+                    </p>
+                  </div>
+
+                  {/* Step 3 */}
+                  <div className="bg-gradient-to-br from-slate-700/50 to-slate-800/50 p-4 sm:p-6 rounded-xl shadow-lg transform hover:scale-[1.01] transition-all duration-300">
+                    <div className="flex items-center gap-4 mb-4">
+                      <span className="text-red-500 text-xl md:text-2xl font-bold">Step #3:</span>
+                      <h4 className="text-lg md:text-xl font-bold text-gray-200">Planning</h4>
+                    </div>
+                    <p className="text-responsive-p-mobile md:text-responsive-p text-gray-300">
+                      We meticulously tailor a comprehensive plan to seamlessly integrate with your existing training regimen, ensuring optimal performance without compromising your training or recovery. Whether you are focussed on running for the long haul, gearing up for a major race, or just starting your running journey, our expertise is here to guide you every step of the way.
+                    </p>
+                  </div>
+                </div>
+
+                <p className="mt-8 md:mt-12 text-responsive-p-mobile md:text-responsive-p px-2 sm:px-4">
                   Using this system, we create highly individualized plans for your
                   specific needs. Training alongside our highly skilled coaches in
                   an athletic performance facility will help meet your goals
@@ -152,74 +161,57 @@ export default function Home() {
             </div>
 
             {/* Shuttle Run Program */}
-            <div id="shuttleRun" className="bg-gradient-to-br from-red-800/90 to-red-900/90 p-8 md:p-12 rounded-2xl shadow-xl">
-              <h3 className="text-responsive-h3 font-bold text-center mb-4">
+            <div id="shuttleRun" className="bg-gradient-to-br from-red-800/90 to-red-900/90 p-4 sm:p-6 md:p-12 rounded-2xl shadow-xl">
+              <h3 className="text-responsive-h3 font-bold text-center mb-3 md:mb-4">
                 Shuttle Run Training Program
               </h3>
-              <h4 className="text-xl text-gray-300 text-center mb-12">
+              <h4 className="text-lg md:text-xl text-gray-300 text-center mb-8 md:mb-12 px-2">
                 Achieve Your Best Shuttle/Beep/Pin Test Score
               </h4>
               
-              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 md:p-8 rounded-xl mb-12">
-                <p className="text-responsive-p-mobile md:text-responsive-p text-center mb-8">
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-4 sm:p-6 md:p-8 rounded-xl mb-8 md:mb-12">
+                <p className="text-responsive-p-mobile md:text-responsive-p text-center mb-6 md:mb-8 px-2">
                   Are you preparing for a career in law enforcement, paramedicine, or any profession requiring a successful Shuttle Run (Beep Test) result?
                 </p>
-                <p className="text-responsive-p-mobile md:text-responsive-p text-center">
+                <p className="text-responsive-p-mobile md:text-responsive-p text-center px-2">
                   Reactive Running Solutions (RRS) offers a comprehensive training program designed to maximize your performance and ensure your success.
                 </p>
               </div>
 
-              <div className="mb-12">
-                <h4 className="text-xl font-bold text-center text-gray-300 mb-6">Why Choose Reactive Running Solutions?</h4>
+              <div className="mb-8 md:mb-12 px-2">
+                <h4 className="text-lg md:text-xl font-bold text-center text-gray-300 mb-4 md:mb-6">Why Choose Reactive Running Solutions?</h4>
                 <p className="text-responsive-p-mobile md:text-responsive-p text-center max-w-4xl mx-auto">
                   We understand the importance of passing the Shuttle Run. Our program is built on a foundation of expert coaching and proven methodologies, providing you with the tools and support you need to excel.
                 </p>
               </div>
 
-              <h4 className="text-xl font-bold text-center text-gray-300 mb-8">Our Program Includes:</h4>
+              <h4 className="text-lg md:text-xl font-bold text-center text-gray-300 mb-6 md:mb-8">Our Program Includes:</h4>
               
-              <div className="grid md:grid-cols-2 gap-8 mb-12">
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
-                  <h5 className="text-lg font-bold text-gray-300 mb-4">Technical Running Instruction</h5>
-                  <ul className="space-y-4 text-responsive-p-mobile md:text-responsive-p">
+              <div className="grid md:grid-cols-2 gap-4 md:gap-8 mb-8 md:mb-12 px-2">
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-4 sm:p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
+                  <h5 className="text-base md:text-lg font-bold text-gray-300 mb-3 md:mb-4">Technical Running Instruction</h5>
+                  <ul className="space-y-3 md:space-y-4 text-responsive-p-mobile md:text-responsive-p">
                     <li>Running is a skill, and we treat it as such. Our program incorporates cutting-edge strength and technical exercises to optimize your running form and efficiency.</li>
                     <li>Whether you&apos;re a seasoned runner or a beginner, our expert coaches will refine your technique for peak performance.</li>
                   </ul>
                 </div>
                 
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
-                  <h5 className="text-lg font-bold text-gray-300 mb-4">Mobility Enhancement</h5>
-                  <ul className="space-y-4 text-responsive-p-mobile md:text-responsive-p">
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-4 sm:p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
+                  <h5 className="text-base md:text-lg font-bold text-gray-300 mb-3 md:mb-4">Mobility Enhancement</h5>
+                  <ul className="space-y-3 md:space-y-4 text-responsive-p-mobile md:text-responsive-p">
                     <li>Optimal mobility is crucial for efficient running and injury prevention.</li>
                     <li>Our coaches are certified in leading mobility enhancement systems, addressing flexibility in the spine, hips, and other critical joints.</li>
                     <li>Improve your range of motion and reduce your risk of pain or injury, giving you a competitive edge.</li>
                   </ul>
                 </div>
-                
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
-                  <h5 className="text-lg font-bold text-gray-300 mb-4">Customized Conditioning Plans</h5>
-                  <ul className="space-y-4 text-responsive-p-mobile md:text-responsive-p">
-                    <li>Enhance your aerobic capacity with personalized training programs designed to meet your specific needs.</li>
-                    <li>Our plans are tailored to your current fitness level, available equipment, and the timeframe leading up to your test.</li>
-                    <li>Experience highly motivating and varied workouts that will push you to your optimal performance.</li>
-                  </ul>
-                </div>
-                
-                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
-                  <h5 className="text-lg font-bold text-gray-300 mb-4">Expert Coaching</h5>
-                  <ul className="space-y-4 text-responsive-p-mobile md:text-responsive-p">
-                    <li>Our coaches are dedicated to your success. They will provide personalized feedback and guidance throughout your training.</li>
-                    <li>We are the industry leader in specialized running training.</li>
-                  </ul>
-                </div>
               </div>
 
-              <div className="text-center max-w-4xl mx-auto bg-white/10 p-8 rounded-xl shadow-xl backdrop-blur-sm">
-                <h4 className="text-xl font-bold mb-4">Prepare for Success. Prepare with Reactive Running Solutions.</h4>
-                <p className="text-responsive-p-mobile md:text-responsive-p mb-6">
+              <div className="text-center max-w-4xl mx-auto bg-white/10 p-4 sm:p-6 md:p-8 rounded-xl shadow-xl backdrop-blur-sm">
+                <h4 className="text-lg md:text-xl font-bold mb-3 md:mb-4">Prepare for Success. Prepare with Reactive Running Solutions.</h4>
+                <p className="text-responsive-p-mobile md:text-responsive-p mb-6 px-2">
                   Don&apos;t leave your Shuttle Test results to chance. Invest in a proven training program that will equip you with the skills and confidence to succeed.
                 </p>
-                <Link href="#contactUs" className="inline-block bg-white text-red-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
+                <Link href="#contactUs" className="inline-block bg-white text-red-700 px-6 sm:px-8 py-2 sm:py-3 rounded-full font-bold text-base md:text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
                   Contact Us Today
                 </Link>
               </div>
