@@ -56,89 +56,177 @@ export default function Home() {
       <FullScreenVideoBackground />
       <main className="relative z-0 flex flex-col items-center">
         <ToTheTopButton />
-        <h1 className="text-responsive-h1 text-center my-20">
-          ELITE-LEVEL RUNNING TRAINING FOR EVERY RUNNER
-        </h1>
-        <p className="-mt-10 mb-5 text-responsive-p-mobile md:text-responsive-p p-10">
-          Unlock your running potential with Ottawa&apos;s premier training
-          program, crafted to enhance strength, speed, and performance while
-          minimizing pain and injury
-        </p>
-        <HeroContainer backgroundColor="bg-red-700">
-          <h2 className="text-responsive-h2 mb-3">OUR PHILOSOPHY</h2>
-          <p className="mb-10 text-responsive-p-mobile md:text-responsive-p p10">
-            At Reactive Running Solutions, we understand your passion for
-            running, but we also recognize the importance of strength, mobility,
-            and technique. Our highly specialized training includes cutting-edge
-            strength and technical exercises, along with the world&apos;s
-            leading mobility system. With our approach, your next run will be
-            faster, stronger and injury free.
+        <div className="w-full max-w-7xl mx-auto px-4 md:px-8">
+          <h1 className="text-responsive-h1 text-center font-bold my-20 animate-fade-in">
+            ELITE-LEVEL RUNNING TRAINING 
+            <span className="block text-red-500">FOR EVERY RUNNER</span>
+          </h1>
+          <p className="text-responsive-p-mobile md:text-responsive-p text-center max-w-3xl mx-auto mb-20 animate-fade-in-delay">
+            Unlock your running potential with Ottawa&apos;s premier training
+            program, crafted to enhance strength, speed, and performance while
+            minimizing pain and injury
           </p>
-          <div className="w-5/6 h-80 md:h-card">
-            <iframe
-              width="100%"
-              height="100%"
-              src="https://www.youtube-nocookie.com/embed/NegX48rYsws?si=xKnvJB80mW8PS3xV"
-              title="YouTube video player"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-            ></iframe>
+        </div>
+
+        <HeroContainer backgroundColor="bg-gradient-to-br from-red-800 to-red-700">
+          <div className="w-full max-w-7xl mx-auto">
+            <h2 className="text-responsive-h2 mb-8 text-center font-bold">OUR PHILOSOPHY</h2>
+            <p className="text-responsive-p-mobile md:text-responsive-p text-center max-w-3xl mx-auto mb-12">
+              At Reactive Running Solutions, we understand your passion for
+              running, but we also recognize the importance of strength, mobility,
+              and technique. Our highly specialized training includes cutting-edge
+              strength and technical exercises, along with the world&apos;s
+              leading mobility system. With our approach, your next run will be
+              faster, stronger and injury free.
+            </p>
+            <div className="w-full max-w-4xl mx-auto aspect-video rounded-lg overflow-hidden shadow-2xl">
+              <iframe
+                width="100%"
+                height="100%"
+                src="https://www.youtube-nocookie.com/embed/NegX48rYsws?si=xKnvJB80mW8PS3xV"
+                title="YouTube video player"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="w-full h-full object-cover"
+              ></iframe>
+            </div>
           </div>
         </HeroContainer>
-        <HeroContainer backroundImage={"herobackgroundimage.webp"}>
-          <div className="w-4/5 md:w-2/3">
-            <h2
-              id="services"
-              className="text-responsive-h2 text-white font-bold text-center"
-            >
-              YOUR JOURNEY STARTS HERE
+        <HeroContainer backgroundColor="bg-gradient-to-br from-slate-900 to-slate-800">
+          <div id="services" className="w-full max-w-7xl mx-auto px-4 md:px-8 py-16">
+            <h2 className="text-responsive-h2 text-white font-bold text-center mb-16">
+              OUR SERVICES
             </h2>
-            <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
-              We strongly believe in customizing your training to suit your
-              individual requirements. Each runner who enrolls with Reactive
-              Running Solutions begins with our introductory training package
-            </p>
-            <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
-              Over three sessions (priced at $149 + tax), we diligently evaluate
-              your primary strengths and areas for enhancement through a
-              detailed process
-            </p>
-            <HeroList
-              items={[
-                {
-                  itemNumber: "Step #1: Assessment",
-                  itemText:
-                    "To ensure we address all your injury concerns comprehensively, we\n" +
-                    "employ the Functional Range Assessment (FRA), the world’s premier diagnostic tool for evaluating your\n" +
-                    "joint's ability to move. This enables us to gain insights into your body's functionality from head to toe,\n" +
-                    "empowering us to craft a tailored plan targeting your key mobility needs.",
-                },
-                {
-                  itemNumber: "Step #2: Training",
-                  itemText:
-                    "After assessing your current capabilities using the FRA, we promptly\n" +
-                    "commence crafting your workouts. We incorporate a diverse array of cutting-edge strength and technical\n" +
-                    "exercises. Regardless of age, ability or experience level, our sessions are challenging, enjoyable, and\n" +
-                    "rewarding, aimed at enhancing your speed and optimizing your movement potential.",
-                },
-                {
-                  itemNumber: "Step #3: Planning",
-                  itemText:
-                    "We meticulously tailor a comprehensive plan to seamlessly integrate\n" +
-                    "with your existing training regimen, ensuring optimal performance without compromising your training or\n" +
-                    "recovery. Whether you are focussed on running for the long haul, gearing up for a major race, or just\n" +
-                    "starting your running journey, our expertise is here to guide you every step of the way.",
-                },
-              ]}
-            />
-            <p className="my-4 text-responsive-p-mobile md:text-responsive-p">
-              Using this system, we create highly individualized plans for your
-              specific needs. Training alongside our highly skilled coaches in
-              an athletic performance facility will help meet your goals
-            </p>
+
+            {/* General Training Program */}
+            <div className="bg-gradient-to-br from-slate-800/80 to-slate-900/80 p-8 md:p-12 rounded-2xl mb-20 shadow-xl">
+              <h3 className="text-responsive-h3 text-red-500 font-bold text-center mb-8">
+                YOUR JOURNEY STARTS HERE
+              </h3>
+              <div className="max-w-4xl mx-auto">
+                <p className="mb-8 text-responsive-p-mobile md:text-responsive-p">
+                  We strongly believe in customizing your training to suit your
+                  individual requirements. Each runner who enrolls with Reactive
+                  Running Solutions begins with our introductory training package
+                </p>
+                <p className="mb-12 text-responsive-p-mobile md:text-responsive-p">
+                  Over three sessions (priced at $199 + tax), we diligently evaluate
+                  your primary strengths and areas for enhancement through a
+                  detailed process
+                </p>
+                <HeroList
+                  items={[
+                    {
+                      itemNumber: "Step #1: Assessment",
+                      itemText:
+                        "To ensure we address all your injury concerns comprehensively, we\n" +
+                        "employ the Functional Range Assessment (FRA), the world's premier diagnostic tool for evaluating your\n" +
+                        "joint's ability to move. This enables us to gain insights into your body's functionality from head to toe,\n" +
+                        "empowering us to craft a tailored plan targeting your key mobility needs.",
+                    },
+                    {
+                      itemNumber: "Step #2: Training",
+                      itemText:
+                        "After assessing your current capabilities using the FRA, we promptly\n" +
+                        "commence crafting your workouts. We incorporate a diverse array of cutting-edge strength and technical\n" +
+                        "exercises. Regardless of age, ability or experience level, our sessions are challenging, enjoyable, and\n" +
+                        "rewarding, aimed at enhancing your speed and optimizing your movement potential.",
+                    },
+                    {
+                      itemNumber: "Step #3: Planning",
+                      itemText:
+                        "We meticulously tailor a comprehensive plan to seamlessly integrate\n" +
+                        "with your existing training regimen, ensuring optimal performance without compromising your training or\n" +
+                        "recovery. Whether you are focussed on running for the long haul, gearing up for a major race, or just\n" +
+                        "starting your running journey, our expertise is here to guide you every step of the way.",
+                    },
+                  ]}
+                />
+                <p className="mt-12 text-responsive-p-mobile md:text-responsive-p">
+                  Using this system, we create highly individualized plans for your
+                  specific needs. Training alongside our highly skilled coaches in
+                  an athletic performance facility will help meet your goals
+                </p>
+              </div>
+            </div>
+
+            {/* Shuttle Run Program */}
+            <div id="shuttleRun" className="bg-gradient-to-br from-red-800/90 to-red-900/90 p-8 md:p-12 rounded-2xl shadow-xl">
+              <h3 className="text-responsive-h3 font-bold text-center mb-4">
+                Shuttle Run Training Program
+              </h3>
+              <h4 className="text-xl text-gray-300 text-center mb-12">
+                Achieve Your Best Shuttle/Beep/Pin Test Score
+              </h4>
+              
+              <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 md:p-8 rounded-xl mb-12">
+                <p className="text-responsive-p-mobile md:text-responsive-p text-center mb-8">
+                  Are you preparing for a career in law enforcement, paramedicine, or any profession requiring a successful Shuttle Run (Beep Test) result?
+                </p>
+                <p className="text-responsive-p-mobile md:text-responsive-p text-center">
+                  Reactive Running Solutions (RRS) offers a comprehensive training program designed to maximize your performance and ensure your success.
+                </p>
+              </div>
+
+              <div className="mb-12">
+                <h4 className="text-xl font-bold text-center text-gray-300 mb-6">Why Choose Reactive Running Solutions?</h4>
+                <p className="text-responsive-p-mobile md:text-responsive-p text-center max-w-4xl mx-auto">
+                  We understand the importance of passing the Shuttle Run. Our program is built on a foundation of expert coaching and proven methodologies, providing you with the tools and support you need to excel.
+                </p>
+              </div>
+
+              <h4 className="text-xl font-bold text-center text-gray-300 mb-8">Our Program Includes:</h4>
+              
+              <div className="grid md:grid-cols-2 gap-8 mb-12">
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
+                  <h5 className="text-lg font-bold text-gray-300 mb-4">Technical Running Instruction</h5>
+                  <ul className="space-y-4 text-responsive-p-mobile md:text-responsive-p">
+                    <li>Running is a skill, and we treat it as such. Our program incorporates cutting-edge strength and technical exercises to optimize your running form and efficiency.</li>
+                    <li>Whether you&apos;re a seasoned runner or a beginner, our expert coaches will refine your technique for peak performance.</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
+                  <h5 className="text-lg font-bold text-gray-300 mb-4">Mobility Enhancement</h5>
+                  <ul className="space-y-4 text-responsive-p-mobile md:text-responsive-p">
+                    <li>Optimal mobility is crucial for efficient running and injury prevention.</li>
+                    <li>Our coaches are certified in leading mobility enhancement systems, addressing flexibility in the spine, hips, and other critical joints.</li>
+                    <li>Improve your range of motion and reduce your risk of pain or injury, giving you a competitive edge.</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
+                  <h5 className="text-lg font-bold text-gray-300 mb-4">Customized Conditioning Plans</h5>
+                  <ul className="space-y-4 text-responsive-p-mobile md:text-responsive-p">
+                    <li>Enhance your aerobic capacity with personalized training programs designed to meet your specific needs.</li>
+                    <li>Our plans are tailored to your current fitness level, available equipment, and the timeframe leading up to your test.</li>
+                    <li>Experience highly motivating and varied workouts that will push you to your optimal performance.</li>
+                  </ul>
+                </div>
+                
+                <div className="bg-gradient-to-br from-slate-800/50 to-slate-900/50 p-6 rounded-xl transform hover:scale-[1.02] transition-all duration-300">
+                  <h5 className="text-lg font-bold text-gray-300 mb-4">Expert Coaching</h5>
+                  <ul className="space-y-4 text-responsive-p-mobile md:text-responsive-p">
+                    <li>Our coaches are dedicated to your success. They will provide personalized feedback and guidance throughout your training.</li>
+                    <li>We are the industry leader in specialized running training.</li>
+                  </ul>
+                </div>
+              </div>
+
+              <div className="text-center max-w-4xl mx-auto bg-white/10 p-8 rounded-xl shadow-xl backdrop-blur-sm">
+                <h4 className="text-xl font-bold mb-4">Prepare for Success. Prepare with Reactive Running Solutions.</h4>
+                <p className="text-responsive-p-mobile md:text-responsive-p mb-6">
+                  Don&apos;t leave your Shuttle Test results to chance. Invest in a proven training program that will equip you with the skills and confidence to succeed.
+                </p>
+                <Link href="#contactUs" className="inline-block bg-white text-red-700 px-8 py-3 rounded-full font-bold text-lg hover:bg-gray-100 transform hover:scale-105 transition-all duration-300">
+                  Contact Us Today
+                </Link>
+              </div>
+            </div>
           </div>
         </HeroContainer>
+
         <h2
           id="ourTeam"
           className="text-responsive-h2 text-white font-bold text-center"
@@ -187,62 +275,90 @@ export default function Home() {
         </div>
       </main>
       <footer className="w-full">
-        <HeroContainer backgroundColor="bg-gray-950">
-          <h2 id="contactUs" className="text-2xl md:text-responsive-h3">
-            CONTACT US
-          </h2>
-          <HeroContainer>
-            <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSepLgjbGxzL9ofvEWjFj9sjbL4N1ZI04k8JC4yeAtb3ttmENg/viewform?embedded=true"
-              width="400"
-              height="1300"
-              frameBorder="0"
-              marginHeight="0"
-              marginWidth="0"
-            >
-              Loading…
-            </iframe>
-          </HeroContainer>
-          <div className="flex items-center flex-wrap justify-center w-full my-8">
-            <h3 className="m-0 text-xl text-center w-full my-2">
-              Reactive Running Solutions
-            </h3>
-            <address className="text-xl">
-              813 Shefford Rd <br />
-              Ottawa, ON <br />
-              K1J 8H9 <br />
-            </address>
-            <Image
-              className="pl-2"
-              src="/ReactiveRunningSolutionsLogo2.webp"
-              alt="Reactive Running Solutions Logo"
-              width={100}
-              height={100}
-            />
-            <div className="w-full flex justify-center items-center">
-              <Link href={"https://www.facebook.com/reactiverunningsolutions"}>
-                <i className="icon-facebook text-5xl px-2 lg:px-4 hover:text-black cursor-pointer" />
-              </Link>
-              <Link
-                href={"https://www.instagram.com/reactiverunningsolutions/"}
-              >
-                <i className="icon-instagram text-4xl hover:text-black cursor-pointer" />
-              </Link>
-              <Link href={"mailto:contact@reactiverunningsolutions.com"}>
-                <i className="icon-email text-5xl hover:text-black cursor-pointer px-2 lg:px-4" />
-              </Link>
+        <HeroContainer backgroundColor="bg-gradient-to-br from-slate-900 to-slate-800">
+          <div className="w-full max-w-7xl mx-auto px-4 md:px-8 py-16">
+            <h2 id="contactUs" className="text-responsive-h2 text-center font-bold mb-16">
+              CONTACT US
+            </h2>
+            
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              {/* Contact Form */}
+              <div className="w-full bg-gradient-to-br from-slate-800/80 to-slate-900/80 p-6 rounded-xl shadow-xl">
+                <div className="w-full overflow-hidden rounded-lg">
+                  <iframe
+                    src="https://docs.google.com/forms/d/e/1FAIpQLSepLgjbGxzL9ofvEWjFj9sjbL4N1ZI04k8JC4yeAtb3ttmENg/viewform?embedded=true"
+                    className="w-full min-h-[800px] md:min-h-[700px]"
+                    frameBorder="0"
+                    marginHeight="0"
+                    marginWidth="0"
+                  >
+                    Loading…
+                  </iframe>
+                </div>
+              </div>
+
+              {/* Contact Information */}
+              <div className="space-y-8">
+                <div className="bg-gradient-to-br from-red-800/90 to-red-900/90 p-6 rounded-xl shadow-xl">
+                  <h3 className="text-xl font-bold mb-4">Visit Us</h3>
+                  <address className="text-lg not-italic">
+                    813 Shefford Rd<br />
+                    Ottawa, ON<br />
+                    K1J 8H9
+                  </address>
+                </div>
+
+                <div className="bg-gradient-to-br from-red-800/90 to-red-900/90 p-6 rounded-xl shadow-xl">
+                  <h3 className="text-xl font-bold mb-4">Connect With Us</h3>
+                  <div className="flex gap-4">
+                    <Link 
+                      href="https://www.facebook.com/reactiverunningsolutions"
+                      className="text-white hover:text-gray-200 transition-colors duration-200"
+                    >
+                      <i className="icon-facebook text-4xl" />
+                    </Link>
+                    <Link 
+                      href="https://www.instagram.com/reactiverunningsolutions/"
+                      className="text-white hover:text-gray-200 transition-colors duration-200"
+                    >
+                      <i className="icon-instagram text-4xl" />
+                    </Link>
+                    <Link 
+                      href="mailto:contact@reactiverunningsolutions.com"
+                      className="text-white hover:text-gray-200 transition-colors duration-200"
+                    >
+                      <i className="icon-email text-4xl" />
+                    </Link>
+                  </div>
+                </div>
+
+                <div className="bg-gradient-to-br from-red-800/90 to-red-900/90 p-6 rounded-xl shadow-xl">
+                  <h3 className="text-xl font-bold mb-4">Location</h3>
+                  <div className="w-full rounded-lg overflow-hidden shadow-lg">
+                    <iframe
+                      className="w-full aspect-video"
+                      loading="lazy"
+                      allowFullScreen
+                      src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJf_nXkToQzkwRY2MgMAXco-w&key=AIzaSyAb6KjvUPEM4nGXvZ-1zpjzP-1p7I0msAw"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center mt-16">
+              <Image
+                src="/ReactiveRunningSolutionsLogo2.webp"
+                alt="Reactive Running Solutions Logo"
+                width={100}
+                height={100}
+                className="mx-auto mb-4"
+              />
+              <p className="text-sm text-gray-400">
+                &copy; {new Date().getFullYear()} Reactive Running Solutions. All Rights Reserved
+              </p>
             </div>
           </div>
-          <iframe
-            width="400"
-            height="450"
-            loading="lazy"
-            allowFullScreen
-            src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJf_nXkToQzkwRY2MgMAXco-w&key=AIzaSyAb6KjvUPEM4nGXvZ-1zpjzP-1p7I0msAw"
-          ></iframe>
-          <p className="text-xs">
-            &copy; 2023 Reactive Running Solutions. All Rights Reserved
-          </p>
         </HeroContainer>
       </footer>
     </div>

@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 
 export const ImageCardGrid = ({ children }) => {
   return (
-    <div className="flex flex-col lg:flex-row items-center justify-center min-h-fit w-full p-8">
+    <div className="flex flex-col items-center justify-center w-full max-w-[1400px] mx-auto px-4 md:px-8 py-8">
       {children}
     </div>
   );
